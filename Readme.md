@@ -6,7 +6,7 @@ Welcome to the **DevOps Training Repository**! 🎯 This repository contains all
 
 ## 📌 **Contents & Module Covered**  
 
-### **1️⃣ Building Blocks**  
+### **1️. Building Blocks**  
 - Linux (RHCSA - Red Hat Certified System Administrator)  
 - Basic Networking & Server Management  
 
