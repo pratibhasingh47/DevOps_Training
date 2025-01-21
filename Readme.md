@@ -15,7 +15,7 @@ Welcome to the **DevOps Training Repository**! 🎯 This repository contains all
 - GitHub Workflow  
 - Working with Branches & Merging  
 
-### **3️⃣ Continuous Integration & Deployment**  
+### **3️. Continuous Integration & Deployment**  
 - Jenkins CI/CD Pipeline  
 - Master-Slave Architecture  
 - Configuring Jobs & Plugins  
