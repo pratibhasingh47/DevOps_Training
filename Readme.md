@@ -10,7 +10,7 @@ Welcome to the **DevOps Training Repository**! 🎯 This repository contains all
 - Linux (RHCSA - Red Hat Certified System Administrator)  
 - Basic Networking & Server Management  
 
-### **2️⃣ Version Control with Git**  
+### **2️. Version Control with Git**  
 - Git Basics  
 - GitHub Workflow  
 - Working with Branches & Merging  
