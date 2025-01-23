@@ -34,7 +34,7 @@ Welcome to the **DevOps Training Repository**! 🎯 This repository contains all
 - Identity & Access Management (IAM)  
 - AWS Lambda & Serverless Applications  
 
-### **7️⃣ Configuration Management & Automation**  
+### **7️. Configuration Management & Automation**  
 - Ansible Playbooks  
 - Deploying & Managing Hosts  
 
