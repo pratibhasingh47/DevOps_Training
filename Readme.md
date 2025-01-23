@@ -25,7 +25,7 @@ Welcome to the **DevOps Training Repository**! 🎯 This repository contains all
 - Kubernetes & OpenShift  
 - Running Applications as Containers  
 
-### **5️⃣ Infrastructure as Code (IaC)**  
+### **5️. Infrastructure as Code (IaC)**  
 - Terraform Basics & Workspaces  
 - Deploying Infrastructure on AWS  
 
