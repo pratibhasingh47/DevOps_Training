@@ -29,7 +29,7 @@ Welcome to the **DevOps Training Repository**! 🎯 This repository contains all
 - Terraform Basics & Workspaces  
 - Deploying Infrastructure on AWS  
 
-### **6️⃣ Cloud Computing (AWS)**  
+### **6️. Cloud Computing (AWS)**  
 - AWS EC2, S3, VPC, RDS  
 - Identity & Access Management (IAM)  
 - AWS Lambda & Serverless Applications  
