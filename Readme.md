@@ -38,7 +38,7 @@ Welcome to the **DevOps Training Repository**! 🎯 This repository contains all
 - Ansible Playbooks  
 - Deploying & Managing Hosts  
 
-### **8️⃣ Monitoring & Logging**  
+### **8️. Monitoring & Logging**  
 - Prometheus, Grafana, & Nagios  
 - Logging with EFK Stack (Elasticsearch, Fluentd, Kibana)  
 
