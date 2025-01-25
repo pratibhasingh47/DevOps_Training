@@ -20,7 +20,7 @@ Welcome to the **DevOps Training Repository**! 🎯 This repository contains all
 - Master-Slave Architecture  
 - Configuring Jobs & Plugins  
 
-### **1. Building Blocks**  
+### **4. Containerization & Orchestration**  
 - Docker & Docker Hub  
 - Kubernetes & OpenShift  
 - Running Applications as Containers  
