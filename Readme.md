@@ -10,35 +10,35 @@ Welcome to the **DevOps Training Repository**! 🎯 This repository contains all
 - Linux (RHCSA - Red Hat Certified System Administrator)  
 - Basic Networking & Server Management  
 
-### **2️. Version Control with Git**  
+### **1. Building Blocks**   
 - Git Basics  
 - GitHub Workflow  
 - Working with Branches & Merging  
 
-### **3️. Continuous Integration & Deployment**  
+### **1. Building Blocks**  
 - Jenkins CI/CD Pipeline  
 - Master-Slave Architecture  
 - Configuring Jobs & Plugins  
 
-### **4️. Containerization & Orchestration**  
+### **1. Building Blocks**  
 - Docker & Docker Hub  
 - Kubernetes & OpenShift  
 - Running Applications as Containers  
 
-### **5️. Infrastructure as Code (IaC)**  
+### **1. Building Blocks**  
 - Terraform Basics & Workspaces  
 - Deploying Infrastructure on AWS  
 
-### **6️. Cloud Computing (AWS)**  
+### **1. Building Blocks**  
 - AWS EC2, S3, VPC, RDS  
 - Identity & Access Management (IAM)  
 - AWS Lambda & Serverless Applications  
 
-### **7️. Configuration Management & Automation**  
+### **1. Building Blocks**  
 - Ansible Playbooks  
 - Deploying & Managing Hosts  
 
-### **8️. Monitoring & Logging**  
+### **1. Building Blocks**  
 - Prometheus, Grafana, & Nagios  
 - Logging with EFK Stack (Elasticsearch, Fluentd, Kibana)  
 
