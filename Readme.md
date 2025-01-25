@@ -10,12 +10,12 @@ Welcome to the **DevOps Training Repository**! 🎯 This repository contains all
 - Linux (RHCSA - Red Hat Certified System Administrator)  
 - Basic Networking & Server Management  
 
-### **1. Building Blocks**   
+### **2. Version Control with Git**   
 - Git Basics  
 - GitHub Workflow  
 - Working with Branches & Merging  
 
-### **1. Building Blocks**  
+### **3. Continuous Integration & Deployment**  
 - Jenkins CI/CD Pipeline  
 - Master-Slave Architecture  
 - Configuring Jobs & Plugins  
