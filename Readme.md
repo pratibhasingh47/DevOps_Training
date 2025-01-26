@@ -34,11 +34,11 @@ Welcome to the **DevOps Training Repository**! 🎯 This repository contains all
 - Identity & Access Management (IAM)  
 - AWS Lambda & Serverless Applications  
 
-### **1. Building Blocks**  
+### **7. Configuration Management & Automation**  
 - Ansible Playbooks  
 - Deploying & Managing Hosts  
 
-### **1. Building Blocks**  
+### **8. Monitoring & Logging**  
 - Prometheus, Grafana, & Nagios  
 - Logging with EFK Stack (Elasticsearch, Fluentd, Kibana)  
 
