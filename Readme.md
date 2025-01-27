@@ -63,4 +63,4 @@ Welcome to the **DevOps Training Repository**! 🎯 This repository contains all
 ### **🔹 Clone This Repository**  
 ```sh
 git clone https://github.com/pratibhasingh47/DevOps_Training.git
-cd DevOps-Training
+cd DevOps_Training
