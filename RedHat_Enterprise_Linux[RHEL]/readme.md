@@ -2,7 +2,7 @@
 
 This section covers the fundamental concepts and practical skills required to manage and operate a Red Hat Enterprise Linux (RHEL) system.  
 
-## Topics Covered  
+## 📚Topics Covered  
 
 ### 🔹 Installation & Setup  
 - Install Red Hat Enterprise Linux  
