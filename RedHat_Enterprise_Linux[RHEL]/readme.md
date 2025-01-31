@@ -60,9 +60,9 @@ This section covers the fundamental concepts and practical skills required to ma
 - Access block-based network storage  
 - High Availability and Load Balancing using HA Proxy  
 
+---
+
 <!-- ---
 
 This section provides hands-on experience with RHEL, preparing you for real-world system administration tasks and the **Red Hat Certified System Administrator (RHCSA)** certification. -->
----
-
 This section provides hands-on experience with RHEL, preparing you for real-world system administration tasks and the **Red Hat Certified System Administrator (RHCSA)** certification.
