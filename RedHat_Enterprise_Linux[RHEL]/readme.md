@@ -51,9 +51,6 @@ This section covers the fundamental concepts and practical skills required to ma
 ### 🔹 Boot & System Recovery  
 - Control the boot process  
 
-<!-- ---
-
-This section provides hands-on experience with RHEL, preparing you for real-world system administration tasks and the **Red Hat Certified System Administrator (RHCSA)** certification. -->
 
 ### 🔹 Server Management  
 - Manage DNS and DNS servers  
@@ -63,6 +60,9 @@ This section provides hands-on experience with RHEL, preparing you for real-worl
 - Access block-based network storage  
 - High Availability and Load Balancing using HA Proxy  
 
+<!-- ---
+
+This section provides hands-on experience with RHEL, preparing you for real-world system administration tasks and the **Red Hat Certified System Administrator (RHCSA)** certification. -->
 ---
 
 This section provides hands-on experience with RHEL, preparing you for real-world system administration tasks and the **Red Hat Certified System Administrator (RHCSA)** certification.
