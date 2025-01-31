@@ -54,3 +54,15 @@ This section covers the fundamental concepts and practical skills required to ma
 <!-- ---
 
 This section provides hands-on experience with RHEL, preparing you for real-world system administration tasks and the **Red Hat Certified System Administrator (RHCSA)** certification. -->
+
+### 🔹 Server Management  
+- Manage DNS and DNS servers  
+- Configure MariaDB SQL databases  
+- Configure web servers  
+- Provide file-based network storage  
+- Access block-based network storage  
+- High Availability and Load Balancing using HA Proxy  
+
+---
+
+This section provides hands-on experience with RHEL, preparing you for real-world system administration tasks and the **Red Hat Certified System Administrator (RHCSA)** certification.
