@@ -6,6 +6,9 @@ U for undo
 yy copy line
 p print line
 !(any no in history)  will trigger that command
+
+-----------------------------------------------------------
+
 echo command >-overwrite >>-append (input redirection)
 > >> ( output redirection (cat -3 > filename))
 error redirection (2> - overwrite 2>>-append)
