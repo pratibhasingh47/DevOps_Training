@@ -15,8 +15,8 @@ error redirection (2> - overwrite 2>>-append)
 error nd output ( &>-overwrite &>>-append)
 command seprator ( ;  && )
 
-
 ------------------------------------------------------------
+
 head (top 10 lines)
 tail ( bottom 10 lines) [eg - head .bashrc && tail.bashrc]
 head -n (where 'n' is any no.)
@@ -31,6 +31,9 @@ sed '/redhat/d' filename - will delete word
 sed -i '.../..d' -will delete original word
 sed -n '4p' shortnote - for printing specific line
 sed -n '2,5' filename - print the range between 2 nd 5
+
+--------------------------------------------------------------
+
 mkdir -p /root/test/test1/test2(make multiple directories)
 tree - will show tree of the directory and files
 * - all
