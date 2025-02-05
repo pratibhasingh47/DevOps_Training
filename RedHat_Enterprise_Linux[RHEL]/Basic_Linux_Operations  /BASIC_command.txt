@@ -1,0 +1,33 @@
+I for insert
+W for save
+Q for quiting without saving
+dd for deleting whole line
+U for undo
+yy copy line
+p print line
+!(any no in history)  will trigger that command
+echo command >-overwrite >>-append (input redirection)
+> >> ( output redirection (cat -3 > filename))
+error redirection (2> - overwrite 2>>-append)
+error nd output ( &>-overwrite &>>-append)
+command seprator ( ;  && )
+head (top 10 lines)
+tail ( bottom 10 lines) [eg - head .bashrc && tail.bashrc]
+head -n (where 'n' is any no.)
+pipeline (|) - head-20 | tail-10 [first command output is second command input]:wq
+less nd more
+grep command (grep string filename)
+grep -i (ignorecase)
+grep - ir (ignorerecursively)
+sed 's/word/tobereplaced/' filename
+sed -i '.............' will change original file
+sed '/redhat/d' filename - will delete word
+sed -i '.../..d' -will delete original word
+sed -n '4p' shortnote - for printing specific line
+sed -n '2,5' filename - print the range between 2 nd 5
+mkdir -p /root/test/test1/test2(make multiple directories)
+tree - will show tree of the directory and files
+* - all
+touch file1 file2 file3 ....(make multiple file)
+rm -rvf file* ( will delete all file)
+ls -a (hidden files)
