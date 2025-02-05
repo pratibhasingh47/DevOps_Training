@@ -14,6 +14,9 @@ echo command >-overwrite >>-append (input redirection)
 error redirection (2> - overwrite 2>>-append)
 error nd output ( &>-overwrite &>>-append)
 command seprator ( ;  && )
+
+
+------------------------------------------------------------
 head (top 10 lines)
 tail ( bottom 10 lines) [eg - head .bashrc && tail.bashrc]
 head -n (where 'n' is any no.)
