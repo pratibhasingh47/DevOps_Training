@@ -4,7 +4,7 @@ I. root uid = 0
 II. system user uid 1 - 999
 III. local user uid = 1000.....till 60000 default
 
------------------------------------------------------------------------
+----------------------------------------------------------------------
 
 AAA [Authentication/Authorization/Audit] (22/1/25)
 
@@ -18,6 +18,9 @@ cat /etc/passwd [ we can see uid & gid of all users]
 userdel <foo> -delete the user [directory will still present]
 userdel -r [will delete the directory also from home]
 ls /var/spool/mail - we can see the user file here it will only be deleted from userdel -r
+
+----------------------------------------------------------------------
+
 groupadd - will add new grp with gid
 groupdel - delete grp
 passwd - used to assign password to user
