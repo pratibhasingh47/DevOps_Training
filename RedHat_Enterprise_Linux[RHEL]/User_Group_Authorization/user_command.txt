@@ -1,0 +1,6 @@
+two types of shell - login nd nologin shell
+3 types of user :-
+I. root uid = 0
+II. system user uid 1 - 999
+III. local user uid = 1000.....till 60000 default
+
