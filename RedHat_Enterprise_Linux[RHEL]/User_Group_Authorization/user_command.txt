@@ -4,3 +4,43 @@ I. root uid = 0
 II. system user uid 1 - 999
 III. local user uid = 1000.....till 60000 default
 
+-----------------------------------------------------------------------
+
+AAA [Authentication/Authorization/Audit] (22/1/25)
+
+useradd [ it will add user to system with uid 1001]
+gid - groupid
+id <foo> -will provide userid nd grpid
+useradd <foo> [only root can access or the user itself(foo)]
+ls /home - [will show all user]
+ls -a /home/foo [will show all hidden files in newly created user]
+cat /etc/passwd [ we can see uid & gid of all users]
+userdel <foo> -delete the user [directory will still present]
+userdel -r [will delete the directory also from home]
+ls /var/spool/mail - we can see the user file here it will only be deleted from userdel -r
+groupadd - will add new grp with gid
+groupdel - delete grp
+passwd - used to assign password to user
+only root(sudo) can change pswd
+sudo su (jump to root)
+su - foo47 [root@localhost -----> foo47@localhost]
+foo47@localhost - passwd
+changing password in pswd foo will require more specific password although there are no restrictions on he root giving any pswd but local user have
+primary group [
+sudo useradd A
+sudo id A
+sudo useradd B -g A
+sudo id B
+]
+
+secondary group at creating user [
+sudo groupadd D
+sudo useradd C -G D
+sudo id C
+]
+
+useradd eg -c "This is comment we can see in vim/etc/passwd"
+sudo useradd AD -u 1471 [ start the uid with specific alloted no.]
+sudo useradd ADC -s /sbin/nologin/ [user cannot be logged in ]
+/bin/bash - login shell
+/sbin/nologin - nologin shell
