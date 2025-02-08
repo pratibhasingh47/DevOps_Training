@@ -51,6 +51,14 @@ tty(to track terminal)
 
 
 ----------------------------------------------------------------------------
-----------------------------------------------------------------------------
+
+Default configuration files
+vim /etc/default/useradd
+HOME = /mnt (can change the user home directory)
+useradd ABC
+ls /home/
+ls /mnt
 
 
+vim /etc/login.defs
+vim /etc/security/limits.conf
