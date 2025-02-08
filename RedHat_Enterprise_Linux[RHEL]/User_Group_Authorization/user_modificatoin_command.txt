@@ -10,3 +10,18 @@ sudo usermod foo47 -g production
 id foo47
 uid=1001(foo47) gid=1005(production) groups=1005(production),1004(linuxx)
 ]
+
+----------------------------------------------------------------------------
+
+/etc/passwd
+pratibhasingh :x: 1000: 1000: Pratibha Singh:  /home/pratibhasingh:     /bin/bash
+(username ----password{hidden}----uid----gid---comment----pathofHomeDirectory-----loginShell)
+
+
+/etc/group
+linuxx:x:1004:foo47
+(groupname----password(hidden)---gid---username)
+
+to add usergroup
+sudo usermod pratibhasingh -G foo47
+usermod - user modification
