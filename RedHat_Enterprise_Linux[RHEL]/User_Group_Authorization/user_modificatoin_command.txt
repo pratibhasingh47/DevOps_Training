@@ -25,3 +25,32 @@ linuxx:x:1004:foo47
 to add usergroup
 sudo usermod pratibhasingh -G foo47
 usermod - user modification
+
+
+----------------------------------------------------------------------------
+
+
+chage -l pratibhasingh
+
+sudo useradd EG
+sudo chage EG
+sudo chage -l  EG
+
+
+
+/etc/skel
+all ls -a files
+when user is created the skel data is copied to new user
+
+
+/var/spool/mail
+mail server configuration of all users
+
+
+tty(to track terminal)
+
+
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+
+
