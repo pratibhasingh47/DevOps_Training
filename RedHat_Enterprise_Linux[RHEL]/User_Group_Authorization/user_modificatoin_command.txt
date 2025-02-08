@@ -1,0 +1,12 @@
+User Modification (23/1/25)
+
+to change the secondary group of any user [
+id foo47
+uid=1001(foo47) gid=1001(foo47) groups=1001(foo47)
+sudo groupadd linuxx
+sudo usermod foo47 -G linuxx
+sudo groupadd production
+sudo usermod foo47 -g production
+id foo47
+uid=1001(foo47) gid=1005(production) groups=1005(production),1004(linuxx)
+]
