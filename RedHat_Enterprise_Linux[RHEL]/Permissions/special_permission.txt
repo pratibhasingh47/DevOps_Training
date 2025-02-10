@@ -76,3 +76,12 @@ user to be added in the group
 
 ---------------------------------------------------------------------------
 
+chattr (to restrict deletion and editing of content of files even root cannot edit and delete it )
+
+chattr +i filename (to implement chattr)
+chattr -i filename ( to remove it )
+
+sudo chattr +a newfile (to apply chattr to read only file and append it)
+sudo chattr -a newfile (to remove append mode)
+generally use in log files. log files store the entry of user and action taken by them so log files are important for system )
+
