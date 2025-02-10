@@ -42,3 +42,37 @@ ll
 -rw-r--r--. 1 foo47 root 0 Jan 25 09:55 /test/foo
 
 ---------------------------------------------------------------------------
+
+getfacl/setfacl[ACL]
+
+getfacl newfile
+setfacl -m u:new:rwx newfile (for user permission)
+ls -l newfile
+-rw-rwxr--+ 1 pratibhasingh pratibhasingh 5 Jan 24 10:02 newfile
+
+
+setfacl -m g:linuxx:rwx file1 (for froup)
+group:linuxx:rwx
+ setfacl -x g:linuxx file1 (removing permission)
+
+setfacl -b file1 (remove permission and set back to default values)
+
+
+Setfacl –m u:username:rwx file/dir
+Getfacl file/dir
+Setfacl –m gLgroupname:rwx file/dir
+Setfacl –x u:username file/dir
+Setfacl –m d:u:username:rwx /dir
+Setfacl -R –m u:username:rwx file/dir
+
+
+vim /etc/sudoers
+sudo visudo
+%linuxx ALL=(ALL)       ALL
+to add in wheel group
+
+sudo usermod new -G  wheel
+user to be added in the group
+
+---------------------------------------------------------------------------
+
