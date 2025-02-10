@@ -36,3 +36,17 @@ chmod 000 newfile(Full permission)
 chmod 777 newfile(No permission)
 
 ---------------------------------------------------------------------------
+
+ls -l
+-rw-r--r--. 1 pratibhasingh pratibhasingh   42 Jan 23 11:43 Veg.txt
+sudo chown root Veg.txt
+-rw-r--r--. 1 root          pratibhasingh   42 Jan 23 11:43 Veg.txt
+sudo chgrp A Veg.txt
+-rw-r--r--. 1 root          A               42 Jan 23 11:43 Veg.txt
+sudo chown pratibhasingh:linuxx Veg.txt
+-rw-r--r--. 1 pratibhasingh linuxx          42 Jan 23 11:43 Veg.txt
+sudo chown :A Veg.txt
+-rw-r--r--. 1 pratibhasingh A               42 Jan 23 11:43 Veg.txt
+
+
+---------------------------------------------------------------------------
