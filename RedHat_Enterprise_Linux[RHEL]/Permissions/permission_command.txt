@@ -1,0 +1,38 @@
+
+PERMISSIONS 
+[Users ---- Group --- Others]
+
+for viewing permission in files
+ls -l /etc/passwd
+
+for viewing permission in directory
+ls -ld /etc
+
+3 types of alphabetic identifying permission
+u
+g
+o
+
+ls -l newfile
+chmod u+x newfile
+Each permission is assigned with value
+r = 4
+w = 2
+x = 1
+0 = no permission
+Full permission is 7
+but default is always 6 due to execution permission not permitted
+
+ls - l newfile
+chmod u-x newfile
+chmod u-r newfile
+chmod u-w newfile
+chmod g+w newfile
+
+g+s → Ensures new files inherit the parent directory's group
+
+chmod 624 newfile
+chmod 000 newfile(Full permission)
+chmod 777 newfile(No permission)
+
+---------------------------------------------------------------------------
