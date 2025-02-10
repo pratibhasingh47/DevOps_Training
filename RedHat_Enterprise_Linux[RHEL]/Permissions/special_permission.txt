@@ -1,0 +1,33 @@
+Special Permission
+->StickyBit
+o+t (owner or user = file / dir = owner /root)
+
+
+Suid
+Sgid
+Chattr
+
+---------------------------------------------------------------------------
+
+SUID 
+
+chmod u+s /usr/sbin/useradd
+number - 4777
+directory - no use , only for file implementation
+
+
+ls -l /usr/sbin/userdel
+-rwxr-xr-x. 1 root root 91136 Sep 13 19:00 /usr/sbin/userdel
+sudo chmod 4755 /usr/sbin/userdel
+ ls -l /usr/sbin/userdel
+-rwsr-xr-x. 1 root root 91136 Sep 13 19:00 /usr/sbin/userdel
+
+
+sudo chmod 4755 /usr/sbin/userdel ( for giving suid)
+sudo chmod 0755 /usr/sbin/userdel ( for sticky beat again)
+
+
+
+---------------------------------------------------------------------------
+
+---------------------------------------------------------------------------
