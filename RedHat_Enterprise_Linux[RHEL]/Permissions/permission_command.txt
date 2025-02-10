@@ -50,3 +50,19 @@ sudo chown :A Veg.txt
 
 
 ---------------------------------------------------------------------------
+
+umask -0022
+drwxr-xr-x. 2 root root 6 Jan 23 22:35 demo
+777 - 022 = 755 [ Current permission ] - for directory
+666 - 000 = 666 [for permission of files-default]
+system will never give permission for execution of files
+umask cannot set execution of files(-rw-rw-rw-)
+
+umask 0000 ( for setting umask)
+
+
+user specific umask
+vim .bashrc (set umask 0000)
+vim /etc/login.defs
+
+/dev/null - instant delete
