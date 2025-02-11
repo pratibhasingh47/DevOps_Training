@@ -62,4 +62,4 @@ This section covers the fundamental concepts and practical skills required to ma
 
 ---
 
-This section provides hands-on experience with RHEL, preparing you for real-world system administration tasks and the **Red Hat Certified System Administrator (RHCSA)** 
+This section provides hands-on experience with RHEL, preparing you for real-world system administration tasks 
