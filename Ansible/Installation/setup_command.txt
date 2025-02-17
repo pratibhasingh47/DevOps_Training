@@ -1,0 +1,11 @@
+ ANSIBLE
+    OpenSource Automation Tool used for automating IT Task
+
+
+   - script(Bash) is not intelligent option
+   - if not written properly then due to some hindrance only half task may be performed so it is dangerous
+
+    2005 - 2011 puppet , chef
+    2012 - Ansible launched (redhat owned & is open source now)
+
+
