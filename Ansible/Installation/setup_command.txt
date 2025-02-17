@@ -25,3 +25,41 @@
     -local
     -Partial
 
+---------------------------------------------------------------------------------------------
+
+
+ sudo dnf install \
+https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+    yum install ansible*
+    vim /etc/ansible/ansible.cfg
+
+pratibhasingh@rhel [~] $ mkdir ansible
+pratibhasingh@rhel [~] $ cd ansible/
+pratibhasingh@rhel [~/ansible] $ vim ansible.cfg
+
+    [
+    [defaults]
+
+    inventory= /home/pratibhasingh/ansible/hosts
+    remote_user= ec2-user
+    ask_pass= false
+    private_key_file= /home/pratibhasingh/ansible/redhat_key.pem
+    host_key_checking= false
+    ]
+
+    vim hosts(add ip of server)
+    chmod 400 redhat_key.pem
+    ansible all -m ping
+
+    vim hosts
+    ansible all --list-host
+    ansible prod --list-host
+
+    changing server name
+    sudo vim /etc/hosts
+    vim hosts
+     hosts (2):
+    ansible1.com
+    ansible2.com
+
+
