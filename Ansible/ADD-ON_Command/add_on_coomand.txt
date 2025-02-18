@@ -1,0 +1,52 @@
+ansible all --list-host
+    vim hosts
+    [
+    #172.16.5.[1:10]
+    #redhat[1:5].com
+
+
+    [india]
+    172.16.5.[1:5]
+
+    [USA]
+    172.17.5.[1:5]
+
+    [website:children]
+    india
+    USA
+    ]
+
+    ansible website --list-host
+
+    ---------------------------------------------------------------------------------------------
+
+    [ADD-ON Command]
+
+    ansible all -m command -a "touch /file1"(ec2-user don't have root priviledge)
+    ansible all -m command -a "touch /home/ec2-user/file2"
+
+    vim ansible.cfg
+        [privilege_escalation]
+        become= true
+        become_user= root
+        become_method= sudo
+        become_ask_pass= false
+
+
+    ansible all -m command -a "touch /root/file2"
+    ansible all -m user -a "name=adam state=present"
+
+
+    ansible all -m user -a "name=bob uid=1007 groups=adam shell=/sbin/nologin state=present"
+    ansible all -m user -a "name=alice  group=adam shell=/sbin/nologin state=present"
+    ansible all -m command -a "id bob"
+    ansible all -m yum -a "name=httpd state=present"
+    ansible all -m command -a "rpm -q httpd"
+    ansible all -m command -a "systemctl enable --now httpd"
+    ansible ansible1.com -m file -a "path=/root/file100 state=touch"
+    ansible ansible1.com -m file -a "path=/root/dir100 state=directory"
+    ansible all -m user -a "name=jhon state=present" -b
+    ansible ansible1.com -m file -a "path=/root/dir101 mode='777' owner=adam  state=directory" -b
+    ansible all -m command -a "ls -l /root" -b
+
+
