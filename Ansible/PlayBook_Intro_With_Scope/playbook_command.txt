@@ -1,0 +1,195 @@
+ PLAYBOOK
+
+    vim play1.yml
+    ansible-playbook --syntax-check play1.yml
+    ansible-playbook play1.yml
+    ansible all -m command -a "id lion"
+
+----------------------------------------------------------------------------------------
+
+vim playbook.yml
+    [
+
+    ---
+ - name: using module group,user,yum,FILE
+   hosts: all
+   tasks:
+     - name: create a group
+       group:
+         name: redhat
+         state: present
+
+     - name: create a user
+       user:
+         name: kimSo
+         uid: '1200'
+         groups: redhat
+         state: present
+
+     - name: installing webserver
+       yum:
+         name: httpd
+         state: present
+
+     - name: creating a file
+       file:
+         path: /mnt/test
+         state: touch
+
+     - name: adding a line
+       lineinfile:
+         path: /mnt/test
+         line: 'this is for testing'
+         create: yes
+         state: present
+
+    ]
+
+    ansible-playbook -C playbook.yml
+    ansible-playbook playbook.yml
+    ansible all -m command -a "ls -l /mnt"
+
+----------------------------------------------------------------------------------------
+
+  vim multi.yml
+
+    ansible-playbook -C multi.yaml
+    ansible-playbook multi.yaml
+    ansible all -m command -a "tail -2 /etc/passwd"
+    ansible all -m command -a "tail -2 /etc/passwd"
+
+
+    [
+
+    ---
+ - name: creating multiplay
+   hosts: ansible1.com
+   tasks:
+     - name: remove httpd
+       yum:
+         name: httpd
+         state: absent
+
+     - name: delete user
+       user:
+         name: kimSo
+         state: absent
+
+
+ - name: creating multiplay
+   hosts: ansible2.com
+   tasks:
+     - name: copy file and changed permission
+       copy:
+         src: /home/pratibhasingh/ansible/devops
+         mode: '666'
+         dest: /mnt/
+
+
+    ]
+
+----------------------------------------------------------------------------------------
+  vim variable.yml
+
+    [
+
+    ---
+ - name: creating user
+   hosts: all
+   vars:
+     - user_1: rohit
+     - user_2: nikhil
+     - group_1: prod
+     - group_2: testing
+   tasks:
+     - name: create user
+       user:
+         name: "{{ user_1 }}"
+         state: present
+
+     - name: create second user
+       user:
+         name: "{{ user_2 }}"
+         state: present
+
+     - name: creating group
+       group:
+         name: "{{ group_1 }}"
+         state: present
+
+     - name: creating second user
+       group:
+         name: "{{ group_2 }}"
+         state: present
+
+    ]
+
+    ansible-playbook -C variable.yml
+    ansible-playbook variable.yml
+
+
+----------------------------------------------------------------------------------------
+ ansible-playbook -C variable.yml
+    ansible-playbook variable.yml
+
+
+    vim variable.yml from external-scope
+
+    ---
+ - name: creating user
+   hosts: all
+   vars_files:
+     - var.yml
+   tasks:
+     - name: create user_1
+       user:
+         name: "{{ user_1 }}"
+         state: present
+
+     - name: create second user
+       user:
+         name: "{{ user_2 }}"
+         state: present
+
+     - name: creating group
+       group:
+         name: "{{ group_1 }}"
+         state: present
+
+     - name: creating second user
+       group:
+         name: "{{ group_2 }}"
+         state: present
+
+    vim var.yml
+
+    user_1: Linux
+    user_2: Ubuntu
+    group_1: Arch
+    group_2: Redhat
+
+ansible-playbook  variable.yml
+ansible all -m command -a "tail -4 /etc/passwd"
+ansible all -m command -a "tail -4 /etc/group"
+
+----------------------------------------------------------------------------------------
+
+    IMPORTANT
+     vim global.yml
+
+---
+ - name: create user
+   hosts: all
+   tasks:
+     - name: yum httpd
+       yum:
+         name: "{{ name_1 }}"
+         state: present
+
+
+ ansible-playbook -C global.yml -e "name_1=httpd"
+ ansible-playbook global.yml -e "name_1=httpd"
+ ansible all -m command -a "rpm -q httpd"
+
+
+
