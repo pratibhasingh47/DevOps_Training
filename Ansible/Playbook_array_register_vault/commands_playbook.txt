@@ -1,0 +1,108 @@
+20/2/25
+
+    ansible all -m ping
+    vim choti_playbook.yml
+
+    [
+    ---
+ - name: creating user
+   hosts: all
+   tasks:
+     - name: creating multiple user
+       user:
+         name: "{{ usr_1 }}"
+         state: present
+    ]
+
+
+    mkdir host_vars group_vars
+    cd host_vars/
+    touch ansible1.com ansible2.com
+    vim ansible1.com
+    vim ansible2.com
+    ansible-playbook -C choti_playbook.yml
+    ansible-playbook choti_playbook.yml
+    ansible all -m command -a "id prats"
+    ansible all -m command -a "id singh"
+    ansible all -m command -a "tail -2 /etc/passwd"
+
+--------------------------------------------------------------------------------------
+vim data.yml
+    ---
+ - name: Array
+   hosts: all
+   vars_files:
+     - array.yml
+   tasks:
+     - name: creating user with array
+       user:
+         name: "{{ custom.development.user }}"
+         state: present
+
+     - name: creating group for dev with array
+       group:
+         name: "{{ custom.development.group }}"
+         state: present
+
+     - name: creating user in prod with array
+       user:
+         name: "{{ custom.production.user }}"
+         state: present
+
+     - name: creating second group
+       group:
+         name: "{{ custom.production.group }}"
+         state: present
+
+    vim array.yml
+
+custom:
+  development:
+    user: Tony
+    group: stark
+  production:
+    user: pratibha
+    group: singh
+
+
+ansible-playbook --syntax-check data.yml
+vim array.yml
+ansible-playbook -C data.yml
+ansible-playbook  data.yml
+
+--------------------------------------------------------------------------------------
+    vim register.yml
+
+---
+ - name: creating user and testing reg. var.
+   hosts: all
+   tasks:
+     - name: testing reg. var. while creating user
+       user:
+         name: vikas
+         state: present
+       register: result_book
+
+     - name: show result using debug
+       debug:
+         var: result_book
+
+     - name: creating group
+       group:
+         name: tier2
+         state: present
+       register: result_b2
+
+     - name: show result using debug
+       debug:
+         var: result_b2
+
+vim register.yml
+ansible-playbook -C register.yml
+ansible-playbook register.yml
+
+
+--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
