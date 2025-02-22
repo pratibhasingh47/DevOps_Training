@@ -1,0 +1,79 @@
+    setup module-facts
+first -    ansible ansible1.com -m setup
+
+    vim fact.yml
+
+---
+ - name: testing facts
+   hosts: all
+   tasks:
+     - name: testing facts
+       debug:
+         var: ansible_date_time.date(second)
+
+    ansible-playbook --syntax-check fact.yml
+    ansible-playbook -C fact.yml
+    ansible-playbook fact.yml
+
+
+---
+ - name: testing facts
+   hosts: all
+   tasks:
+     - name: testing facts
+       debug:
+         var: ansible_facts.bios_date(third)
+
+
+pratibhasingh@rhel [~/ansible] $ cd host_vars/
+pratibhasingh@rhel [~/ansible/host_vars] $ ls
+ansible1.com  ansible2.com  ubuntu
+pratibhasingh@rhel [~/ansible/host_vars] $ vim ubuntu
+pratibhasingh@rhel [~/ansible/host_vars] $ cat ubuntu
+ansible_user: ubuntu
+ansible_ssh_private_key_file: /home/pratibhasingh/ansible/ubuntu.pem
+
+
+--------- Hashing || Multi-Loop || Dictionary :
+
+---
+ - name: testing loop
+   hosts: all
+   tasks:
+     - name: creating user
+       group:
+         name: "{{ item }}"
+         state: present
+       loop:
+         - group51
+         - group53
+         - group47
+         - group14
+     - name: loop
+       user:
+         name: "{{item.user }}"
+         groups: "{{ item.group }}"
+         state: present
+       loop:
+         - user: user61
+           group: group51
+         - user: user47
+           group: group47
+         - user: user14
+           group: group14
+
+
+    vim conditional.yml
+
+---
+  - name: condition
+    hosts: all
+    tasks:
+      - name: Testing Conditions.
+        user:
+          name: user-100
+          state: present
+        when: ansible_distribution == "RedHat"
+
+
+
