@@ -90,6 +90,28 @@ renice -n +19 592440
 
 
 ----------------------------------------------------------------------------------------------------
+
+Services -  continous running program (process)
+
+Daemons - program[eg. sshd ]
+a computer program that runs in the background of an operating system (OS) to perform specific tasks
+
+systemctl start sshd
+systemctl stop sshd
+
+systemctl status sshd
+systemctl restart sshd
+
+systemctl disable sshd
+systemctl enable sshd
+
+systemctl enable --now sshd (also start service at same time)
+systemctl reload sshd (to reload and read configurations)
+
+systemctl mask sshd (protect the system and restrit to perform any systemctl changes)
+systemctl unmask sshd(remove protection)
+
+
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
