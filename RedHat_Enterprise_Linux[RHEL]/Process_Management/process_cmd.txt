@@ -77,6 +77,17 @@ pkill -t pts/2 -> to kill all the process in terminal 2 even the shell is killed
 pkill -p pid (to kill process from parentid)
 
 
+NICE value NI
+-20 Highest priority
++19 Lowest priority
+
+
+by default nice value is 0
+ps -o nice,pid,comm
+nice -n -20 sleep 9000&
+renice -n +19 592440
+
+
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
