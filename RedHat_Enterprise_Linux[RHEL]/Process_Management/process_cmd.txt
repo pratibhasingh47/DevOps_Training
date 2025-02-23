@@ -1,0 +1,49 @@
+
+
+Forking - refers to creating a new process by duplicating an exisitng process
+PPID - parent process->child process
+if process is complete but still process does not release its pid then ->Zombie process
+
+process state flags
+Running - R
+Sleeping - S
+Uninterupted Sleep - D
+Idle - I
+Kernel - K
+Stopped - T
+Zombie - Z
+Dead - X
+
+----------------------------------------------------------------------------------------------------
+
+
+ps -aux
+user generated
+system generated(booting process , system D)
+
+USER
+PID
+%CPU
+%MEM
+VSZ - virtual memory size
+RSS - resident size
+TTY -?(process are not engaging terminal)
+STAT - S,R....process state code
+START - time when process start
+TIME - total cpu time
+COMMAND - command through which process generated
+
+ps->to track pid
+ps -a
+ps -l
+ps -au
+ps -ef
+
+
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+
+
