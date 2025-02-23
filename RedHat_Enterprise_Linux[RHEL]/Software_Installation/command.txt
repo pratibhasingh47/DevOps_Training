@@ -1,0 +1,38 @@
+S/W installation package in redhat
+RPM
+yum
+dnf
+
+
+rpm -q packagename (if system has the package or not)
+rpm -q wget
+
+rpm -qi wget(to get all the details of package)
+
+rpm -e wget (delete the package)
+rpm -i wget /run/media/root/.....
+
+
+rpm -evh
+rpm -ivh
+
+
+----------------------------------------------------------------------------------
+
+
+
+[AppStream]
+baseurl= file:///run/media/pratibhasingh/RHEL-9-5-0-BaseOS-x86_64/AppStream/Packages
+enabled= true
+gpgcheck= false
+gpgkey//
+name=AppStream
+
+
+[AppStream]
+baseurl= file:///..........
+enabled= true
+gpgcheck= false
+gpgkey//
+name=AppStream
+
