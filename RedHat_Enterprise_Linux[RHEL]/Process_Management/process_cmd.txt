@@ -145,4 +145,18 @@ systemctl isolate multi-user.target
 ----------------------------------------------------------------------------------------------------
 
 
+init 6(to restart the system)
+
+[to break linux machine password]
+select the enter E
+rd.break [ctrl+x]
+mount -o remount,rw /sysroot
+chroot sysroot
+passwd root
+-new password
+-retype password
+touch /.autorelabel
+exit
+exit
+
 
