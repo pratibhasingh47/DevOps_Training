@@ -113,6 +113,35 @@ systemctl unmask sshd(remove protection)
 
 
 ----------------------------------------------------------------------------------------------------
+
+
+BOOTING Services
+1.power ON
+2.BIOS basic i/o system
+3.POST Power on Self Test
+4.Bootable Device
+5.MBR [Master Boot Recoder]
+ -bootloader(kernelLoad)
+ -partitionTable
+ -checksum
+INIT RAMfs (mini - compressed image to run kernel then only kernel starts/load)
+6.systemd starts now
+1-6[read only permission]
+
+After systemd the one of two targets can be hit
+graphical target (GUI SHell)
+multi user target (CLI Shell)
+
+systemctl get-default
+->graphical.target
+
+systemctl set-default graphical.target
+systemctl isolate graphical.target
+
+systemctl set-default multi-user.target
+systemctl isolate multi-user.target
+
+
 ----------------------------------------------------------------------------------------------------
 
 
