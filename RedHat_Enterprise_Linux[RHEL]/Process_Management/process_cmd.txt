@@ -41,6 +41,43 @@ ps -ef
 
 
 ----------------------------------------------------------------------------------------------------
+
+
+JOBS & Session
+
+jobs
+send job background to run using ampersand &
+sleep 100&
+
+fg %n bring the n command to foreground from background
+to stopped any process ctrl+z
+fg %3
+sleep 1000
+^Z
+[3]+  Stopped                 sleep 1000
+
+bg %3
+resume the stopped process to running
+
+kill -l
+pstree [process tree if any parent will kill then all the child process will also kill]
+
+kill -9(kill forcefully)
+
+kill -9 1 ( it cannot overwrite or kill systemd )
+
+kill -20 to stopp any process no need to bring it foreground
+kill -18 to resume the stopped process
+
+pkill sleep* to terminate all sleep process
+
+tty- to check terminal
+pkill -t pts/2 -> to kill all the process in terminal 2 even the shell is killed
+
+pkill -p pid (to kill process from parentid)
+
+
+
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
