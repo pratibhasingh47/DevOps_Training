@@ -57,6 +57,54 @@
          state: present
 
 --------------------------------------------------------------------------------
+
+------- forcefully
+
+---
+ - name: using handlers
+   hosts: all
+   force_handlers: yes
+   tasks:
+     - name:
+       user:
+         name: user14444
+         state: present
+       notify: creating grp
+
+     - name: using yum
+       yum:
+         name: nope
+         state: present
+
+   handlers:
+     - name: creating grp
+       group:
+         name: group301
+         state: present
+
+
+
+
 --------------------------------------------------------------------------------
+
+    vim ignoreError.yml
+
+ - name: using errors
+   hosts: all
+   tasks:
+     - name:
+       yum:
+         name: notapackage
+         state: present
+       ignore_errors: yes
+
+     - name:
+       command: "mkdir /root/test"
+
+
+     - name: users
+       user:
+         name: user555
+         state: present
 --------------------------------------------------------------------------------
 
