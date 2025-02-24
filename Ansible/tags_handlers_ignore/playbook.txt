@@ -1,0 +1,13 @@
+ vim con2.yml
+
+---
+ - name: using condition
+   hosts: all
+   tasks:
+     - name: installing nginx
+       yum:
+         name: nginx
+         state: present
+       when: ansible_memtotal_mb > 700
+
+--------------------------------------------------------------------------------
