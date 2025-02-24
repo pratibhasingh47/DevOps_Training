@@ -11,3 +11,52 @@
        when: ansible_memtotal_mb > 700
 
 --------------------------------------------------------------------------------
+
+
+    vim handlers.yml
+
+---
+ - name: using handlers
+   hosts: all
+   tasks:
+     - name:
+       user:
+         name: user141
+         state: present
+       notify: creating grp
+
+   handlers:
+     - name: creating grp
+       group:
+         name: group100
+         state: present
+
+
+
+    vim handler.yml(error)
+
+---
+ - name: using handlers
+   hosts: all
+   tasks:
+     - name:
+       user:
+         name: user14444
+         state: present
+       notify: creating grp
+
+     - name: using yum
+       yum:
+         name: nope
+         state: present
+
+   handlers:
+     - name: creating grp
+       group:
+         name: group301
+         state: present
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
