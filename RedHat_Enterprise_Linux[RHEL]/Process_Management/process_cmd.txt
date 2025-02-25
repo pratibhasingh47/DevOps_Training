@@ -143,8 +143,6 @@ systemctl isolate multi-user.target
 
 
 ----------------------------------------------------------------------------------------------------
-
-
 init 6(to restart the system)
 
 [to break linux machine password]
