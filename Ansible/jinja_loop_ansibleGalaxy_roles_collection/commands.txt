@@ -87,3 +87,25 @@ vim jinTest.yml
 
 --------------------------------------------------------------------------------
 
+
+pratibhasingh@rhel [~/ansible] $ ansible-galaxy role install buluma.httpd
+Starting galaxy role install process
+- downloading role 'httpd', owned by buluma
+- downloading role from https://github.com/buluma/ansible-role-httpd/archive/24.3.31.tar.gz
+- extracting buluma.httpd to /usr/share/ansible/roles/buluma.httpd
+- extracting buluma.httpd to /home/pratibhasingh/ansible/roles/buluma.httpd
+- buluma.httpd (24.3.31) was installed successfully
+
+ansible-galaxy role install buluma.httpd
+ 2928  ansible-galaxy role install buluma.httpd -p ~/ansible/roles
+ 2929  ls roles
+ 2930  cd roles
+ 2931  cd buluma.httpd/
+ 2932  cd ..
+ 2933  mkdir collections
+ 2934  rm -rvf collections/
+ 2935  cd ..
+ 2936  mkdir collections
+ 2937  vim ansible.cfg 
+ 2938  ansible-galaxy collection install ansible.posix -p ~/ansible/collections/
+ 2939  ansible-doc -l
