@@ -1,0 +1,24 @@
+    jinja2
+
+---
+ - name: testing jinja
+   hosts: all
+   tasks:
+     - name: jinja template
+       template:
+         src: ~/ansible/jinja.j2
+         dest: /mnt/abc
+
+
+this is my machine IP {{ ansible_all_ipv4_addresses }}
+this is my distribution {{ ansible_distribution }}
+this is my date {{ ansible_date_time.date }}
+
+ansible all -m shell -a "cat /mnt/abc"
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
