@@ -52,5 +52,38 @@ vim jinTest.yml
 
 
 --------------------------------------------------------------------------------
+
+vim loop.j2
+
+{% for x in user %}
+{{ x.name }} is {{ x.role }}at techno
+{% endfor %}
+
+vim jinLoop.yml
+user:
+  - name: garv
+    role: director
+  - name: aditya
+    role: manager
+  - name: daksh
+    role: jalebi
+  - name: manas
+    role: conductor
+
+
+vim jinTest.yml
+---
+ - name: jinja loop
+   hosts: all
+   vars_files:
+     - jinLoop.yml
+   tasks:
+     - name: jinja template
+       template:
+         src: ~/ansible/loop.j2
+         dest: /root/techno
+
+ ansible all -m shell -a "cat /root/techno"
+
 --------------------------------------------------------------------------------
 
