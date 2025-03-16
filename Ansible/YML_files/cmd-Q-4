@@ -1,0 +1,20 @@
+:: To Run Q-2 ::
+ 1049  ansible-playbook assignment-2.yml --tags task-2
+
+
+
+:: To Run Q-5 ::
+ 1051  ansible-playbook assignment-2.yml --tags task-5 -e "user_name=Tom"
+ 1052  ansible-playbook assignment-2.yml --tags task-5 -e "user_name=Jerry"
+
+
+
+:: To Run Q-4 ::
+ 1080  ansible node1 -m command -a "getent passwd Sam"
+ 1081  ansible node2 -m command -a "getent passwd Sara"
+ 1082  ansible node3 -m command -a "getent passwd Veronica"
+ 1083  ansible all -m command -a "ls -l /tmp/ansible_file.txt"
+ 1084  ansible node1 -m command -a "ls -ld /root/Aarambh-Sam"
+ 1085  ansible node2 -m command -a "ls -ld /root/Aarambh-Sara"
+ 1086  ansible node3 -m command -a "ls -ld /root/Aarambh-Veronica"
+ 1087  ansible node1 -m command -a "cat /tmp/ansible_file.txt"
