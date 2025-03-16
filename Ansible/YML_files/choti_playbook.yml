@@ -1,0 +1,11 @@
+---
+ - name: creating user
+   hosts: all
+   tasks:
+     - name: creating multiple user
+       user: 
+         name: "{{ usr_1 }}"
+         state: present
+
+
+
