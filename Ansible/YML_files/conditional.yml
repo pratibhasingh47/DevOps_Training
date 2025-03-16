@@ -1,0 +1,9 @@
+---
+  - name: condition
+    hosts: all
+    tasks:
+      - name: Testing Conditions.
+        user:
+          name: user_100
+          state: present
+        when: ansible_distribution == "RedHat"
