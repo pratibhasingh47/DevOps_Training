@@ -1,0 +1,56 @@
+---
+  - name: Assignment-2
+    hosts: all
+    vars: # Inline Variables
+      file_path: /tmp/ansible_file.txt
+      file_content: "Hello from Ansible!"
+      directory_permissions: "0755"
+    vars_files:
+      - var.yml # External Variable
+    tasks:
+      - name: Creating Users!
+        user:
+          name: "{{ u }}" # Special Variable [Host-specific]
+          state: present
+        tags: user, task-2
+      - name: Creating File!
+        copy:
+          dest: "{{ file_path }}"
+          content: "{{ file_content }}"
+          owner: "{{ u }}"
+          mode: "0644"
+        tags: file, task-2
+      - name: Creating Directory!
+        file:
+          path: "{{ directory_path }}" # Special Variable [Host-specific]
+          state: directory
+          owner: "{{ directory_owner }}" # Special Variable [Host-specific]
+          mode: "{{ directory_permissions }}" 
+        tags: dir, task-2
+      - name: Modify File - Add a Line
+        lineinfile:
+          path: "{{ file_path }}"
+          line: "{{ line_content }}"
+        tags: mf, task-2
+      - name: Modify File - Add Block Content
+        blockinfile:
+          path: "{{ file_path }}"
+          block: "{{ block_content }}"
+          create: yes
+        tags: mfb, task-2
+      - name: Install a Package on Redhat
+        yum:
+          name: "{{ package_name }}"
+          state: present
+        tags: ins_pkg, task-2
+# Task - 5
+      - name: Create user {{ user_name }}
+        user:
+          name: "{{ user_name }}"
+          state: present
+        register: user_creation
+        tags: task-5
+      - name: Show user creation result
+        debug:
+          msg: "User {{ user_name }} has been created."
+        when: user_creation.changed
