@@ -1,0 +1,16 @@
+---
+ - name: create user
+   hosts: all
+   tasks:
+     - name: yum httpd
+       yum: 
+         name: "{{ name_1 }}"
+         state: present
+
+
+
+
+
+
+
+
