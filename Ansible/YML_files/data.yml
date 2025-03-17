@@ -1,0 +1,34 @@
+---
+ - name: Array
+   hosts: all
+   vars_files:
+     - array.yml
+   tasks:
+     - name: creating user with array
+       user: 
+         name: "{{ custom.development.user }}"
+         state: present
+
+     - name: creating group for dev with array
+       group: 
+         name: "{{ custom.development.group }}"
+         state: present
+    
+     - name: creating user in prod with array
+       user:
+         name: "{{ custom.production.user }}"
+         state: present
+
+     - name: creating second group
+       group:
+         name: "{{ custom.production.group }}"
+         state: present
+
+
+
+
+
+
+
+
+
