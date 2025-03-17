@@ -1,0 +1,9 @@
+---
+ - name: testing facts
+   hosts: all
+   tasks:
+     - name: testing facts
+       debug:
+         var: ansible_facts.bios_date
+
+
