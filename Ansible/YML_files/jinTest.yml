@@ -1,0 +1,10 @@
+---
+ - name: jinja loop
+   hosts: all
+   vars_files:
+     - jinLoop.yml
+   tasks:
+     - name: jinja template
+       template:
+         src: ~/ansible/loop.j2
+         dest: /root/techno
