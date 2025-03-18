@@ -1,0 +1,33 @@
+---
+ - name: testing loop
+   hosts: all
+   tasks:
+     - name: creating user
+       group:
+         name: "{{ item }}"
+         state: present
+       loop:
+         - group151
+         - group153
+         - group147
+         - group114
+     - name: loop
+       user:
+         name: "{{item.user }}"
+         groups: "{{ item.group }}"
+         state: present
+       loop:
+         - user: user161
+           group: group151
+         - user: user147
+           group: group147
+         - user: user114
+           group: group114
+
+
+
+
+
+
+
+
