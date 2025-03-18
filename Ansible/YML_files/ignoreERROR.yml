@@ -1,0 +1,20 @@
+---
+ - name: using errors
+   hosts: all
+   tasks:
+     - name:
+       yum:
+         name: notapackage
+         state: present
+       ignore_errors: yes
+
+     - name:
+       command: "mkdir /root/test"
+
+
+     - name: users
+       user:
+         name: user555
+         state: present
+
+
