@@ -1,0 +1,11 @@
+---
+ - name: testing jinja
+   hosts: all
+   tasks:
+     - name: jinja template
+       template:
+         src: ~/ansible/jinja.j2
+         dest: /mnt/abc
+
+
+
