@@ -1,0 +1,6 @@
+line_content: "Ansible Configuration"
+block_content: |
+    Hi, I am using Ansible.
+    Ansible is a Red Hat automation tool.
+    Adding this line From External Variable File!
+package_name: nginx
