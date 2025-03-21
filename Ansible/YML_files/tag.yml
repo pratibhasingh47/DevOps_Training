@@ -1,0 +1,28 @@
+---
+ - name: using tag
+   hosts: all
+   tasks: 
+     - name: create user
+       user:
+         name: user1500
+         state: present
+       tags:
+         - hello
+         - user
+
+     - name: create file
+       file:
+         path: /root/tags
+         state: touch
+       tags:
+         - filemaking
+
+     - name:
+       lineinfile:
+         path: /root/tags
+         line: "This is line1"
+         create: yes
+
+     - name:
+       raw: "mkdir /mnt/rawTest"
+
