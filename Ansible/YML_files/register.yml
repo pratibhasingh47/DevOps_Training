@@ -1,0 +1,26 @@
+---
+ - name: creating user and testing reg. var.
+   hosts: all
+   tasks:
+     - name: testing reg. var. while creating user
+       user: 
+         name: vikas
+         state: present
+       register: result_book
+
+     - name: show result using debug
+       debug:
+         var: result_book
+
+     - name: creating group
+       group:
+         name: tier2
+         state: present
+       register: result_b2
+
+     - name: show result using debug
+       debug:
+         var: result_b2
+
+
+
