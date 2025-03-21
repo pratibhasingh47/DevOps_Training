@@ -1,0 +1,14 @@
+---
+ - name: we are creatng user.
+   hosts: all
+   tasks:
+     - name: creating user lion
+       user: 
+         name: lion
+         state: present 
+
+
+
+
+
+
