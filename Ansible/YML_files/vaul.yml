@@ -1,0 +1,14 @@
+---
+ - name: creating user
+   hosts: all
+   vars_files:
+     - vault.yml
+   tasks:
+     - name: creating multiple user
+       user:
+         name: "{{ usr_1 }}"
+         state: present
+
+
+
+
