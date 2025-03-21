@@ -1,0 +1,38 @@
+---
+ - name: creating user
+   hosts: all
+   vars_files:
+     - var.yml
+   tasks:
+     - name: create user_1
+       user:
+         name: "{{ user_1 }}"
+         state: present
+    
+     - name: create second user
+       user:
+         name: "{{ user_2 }}"
+         state: present
+
+     - name: creating group
+       group:
+         name: "{{ group_1 }}"
+         state: present
+
+     - name: creating second user
+       group:
+         name: "{{ group_2 }}"
+         state: present
+
+
+
+
+
+
+
+
+
+
+
+
+
