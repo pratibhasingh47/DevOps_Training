@@ -43,6 +43,32 @@ Welcome to the **DevOps Training Repository**! 🎯 This repository contains all
 
 ---
 
+## 📁 Project Structure
+
+```bash
+DevOps_Training/
+│
+├── 01-Linux_Basics/                  # Linux commands, RHCSA notes & exercises
+├── 02-Git_Version_Control/          # Git basics, branching, GitHub workflows
+├── 03-Jenkins_CI_CD/                # Jenkins setup, pipelines, plugins
+├── 04-Docker_Kubernetes/            # Dockerfiles, images, Kubernetes manifests
+├── 05-Terraform_IaC/                # Terraform scripts, AWS infra modules
+├── 06-AWS_Cloud/                    # AWS services, Lambda, IAM, EC2 examples
+├── 07-Ansible_ConfigMgmt/          # Ansible playbooks, roles, inventory setup
+├── 08-Monitoring_Logging/          # Prometheus, Grafana, EFK stack setups
+│
+├── Projects/                        # Hands-on DevOps projects
+│   ├── Jenkins_AWS_CICD/           
+│   ├── Terraform_AWS_IaC/          
+│   ├── Dockerized_Microservices/   
+│   ├── Serverless_AWS/             
+│   └── Monitoring_EFK_Prometheus/  
+│
+├── Assignments/                    # Practice tasks and solutions
+├── Notes/                          # Short notes, cheat sheets & references
+├── Tests/                          # Evaluation quizzes and test cases
+└── README.md                       # This file
+
 ## 📂 **Project-Based Learning**  
 🚀 **Hands-on DevOps Projects:**  
 ✅ **Automated CI/CD Pipeline with Jenkins & AWS**  
