@@ -69,6 +69,8 @@ DevOps_Training/
 ├── Tests/                          # Evaluation quizzes and test cases
 └── README.md                       # This file
 
+
+---
 ## 📂 **Project-Based Learning**  
 🚀 **Hands-on DevOps Projects:**  
 ✅ **Automated CI/CD Pipeline with Jenkins & AWS**  
