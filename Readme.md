@@ -16,7 +16,7 @@ Welcome to the **DevOps Training Repository**! 🎯 This repository contains all
 
 ### **3. Continuous Integration & Deployment**  
 - Jenkins CI/CD Pipeline  
-- Master-Slave Architecture  
+- Master-Slave Architecture / Server 
 - Configuring Jobs & Plugins  
 
 ### **4. Containerization & Orchestration**  
