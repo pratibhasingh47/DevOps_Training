@@ -72,7 +72,6 @@ DevOps_Training/
 
 ```
 
-
 ---
 ## 📂 **Project-Based Learning**  
 🚀 **Hands-on DevOps Projects:**  
